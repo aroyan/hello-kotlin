@@ -1,17 +1,7 @@
 package oop
 
-interface StringProvider {
-
-    val placeholder: String
-
-    // Default method implementation
-    fun getString(id: Int): String = id.toString()
-}
-
-interface ResourceProvider: StringProvider {
-    // Default method implementation
-    fun getDimension(id: Int): Long = id.toLong()
-}
+import oop.inter.ResourceProvider
+import oop.inter.StringProvider
 
 class DefaultResourceProvider : ResourceProvider {
 
@@ -20,8 +10,6 @@ class DefaultResourceProvider : ResourceProvider {
 
 fun main() {
 //    val person: Person = Student(20, "Aroyan", "Bakti")
-    val someVar: Any? = null
-
 
     val stringProvider: StringProvider = DefaultResourceProvider()
     println(stringProvider.getString(200))
