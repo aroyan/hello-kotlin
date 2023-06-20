@@ -1,5 +1,6 @@
 package debugging
 
+import milisForHours
 import kotlin.random.Random
 
 fun getRandomInt(): Int {
@@ -14,4 +15,6 @@ fun main() {
             false -> println("$random is odd")
         }
     }
+
+//    println(milisForHours(200))
 }
